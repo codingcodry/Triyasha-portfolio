@@ -256,6 +256,42 @@ section {
   margin: 0.5rem 0;
 }
 
+.contact-info {
+  text-align: left; /* Align text to the left */
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  color: #008080;
+  text-align: left; /* Ensure heading aligns left */
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  text-align: left; /* Align paragraphs to the left */
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start; /* Align social icons to the left */
+}
+
+.social-icons li {
+  margin: 0;
+}
+
+.social-icons a {
+  color: #008080;
+  text-decoration: none;
+}
+
+
+
+
+
 .social-icons {
   list-style: none;
   padding: 0;
