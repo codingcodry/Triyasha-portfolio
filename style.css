@@ -306,6 +306,26 @@ section {
   background: linear-gradient(135deg, #20b2aa, #008080);
 }
 
+#pricing .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
+  gap: 1.5rem; /* Adds spacing between the cards */
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #pricing .pricing-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  #pricing .pricing-grid {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
+
 
 
 
