@@ -50,14 +50,82 @@ section {
 }
 
 #about {
-  background: #fff;
+  background: #f9f9f9;
+  padding: 2rem 1rem;
 }
+
+#about .container {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 #portfolio .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
+
+#portfolio {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+
+#portfolio h2 {
+  margin-bottom: 1.5rem;
+}
+
+#portfolio .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+
+
+
 
 .project-card {
   background: #fff;
@@ -98,6 +166,69 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+#contact form {
+  max-width: 600px;
+  margin: auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact form input,
+#contact form textarea {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#contact form button {
+  background: linear-gradient(135deg, #008080, #20b2aa);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact form button:hover {
+  background: linear-gradient(135deg, #20b2aa, #008080);
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #008080;
+  font-weight: bold;
+}
+.social-links a:hover {
+  color: #20b2aa;
+}
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Sections */
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
 
 footer {
   text-align: center;
