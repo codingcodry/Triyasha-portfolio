@@ -1,4 +1,9 @@
 /* General Reset */
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -288,10 +293,6 @@ section {
   text-decoration: none;
 }
 
-
-
-
-
 .social-icons {
   list-style: none;
   padding: 0;
@@ -307,13 +308,6 @@ section {
   color: #008080;
   text-decoration: none;
 }
-
-
-
-
-
-
-
 
 .social-links a {
   margin: 0 0.5rem;
@@ -506,7 +500,19 @@ section {
   }
 }
 
+.contact-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #008080;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 
+.contact-button:hover {
+  background-color: #006666;
+}
 
 
 
