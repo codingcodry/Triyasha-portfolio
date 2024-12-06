@@ -7,6 +7,35 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!--   PayPal payment -->
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AenlZdl9rXsgUUQ-5-vpn1K-9jpBkOgg2WqlAGpQgrwC_KpePYstTs5ljOH0lNP4vYO15IvVrUAJ9w7j&currency=USD"></script>
+<script>
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '100.00' // Replace with the actual amount
+          },
+          description: 'Payment for Website Development Service'
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Transaction completed by ' + details.payer.name.given_name);
+        // Optional: Redirect to a success page or log the transaction
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal Checkout Error:', err);
+      alert('An error occurred during the transaction.');
+    }
+  }).render('#paypal-button-container'); // Render PayPal buttons in this container
+</script>
+
+  
 </head>
 <body>
   <header>
@@ -207,9 +236,17 @@
       <div class="payment-card">
         <img src="paypal2.png" alt="PayPal Logo" width="150" height="100"/>
         <h3>PayPal</h3>
+        <div id="paypal-button-container"></div>
+
         <p>Fast and secure payments online.</p>
       </div>
 
+
+
+
+
+
+      
       <!-- Credit/Debit Card -->
       <div class="payment-card">
         <img src="visa.png" alt="Credit/Debit Card Logo" width="150" height="100"/>
